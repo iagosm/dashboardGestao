@@ -16,6 +16,7 @@ class UserModel extends DataBase
   }
 
   public function fetchById() {
+    
     $sql = $this->pdo->prepare('SELECT * FROM cliente WHERE id = ?');
     $sql->execute(['1']);
     if($sql->rowCount() > 0) {
